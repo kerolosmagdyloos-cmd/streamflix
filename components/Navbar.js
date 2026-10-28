@@ -4,6 +4,8 @@ const links = [
   { href: "/", label: "Inicio" },
   { href: "/explorar/tv", label: "Series" },
   { href: "/explorar/movie", label: "Películas" },
+  { href: "/anime", label: "Anime" },
+  { href: "/infantil", label: "Infantil" },
   { href: "/mi-lista", label: "Mi lista" },
 ];
 
@@ -14,7 +16,7 @@ export default function Navbar() {
         <Link href="/" className="text-lg font-extrabold tracking-tight text-brand sm:text-2xl">
           STREAMFLIX
         </Link>
-        <ul className="flex gap-3 text-xs text-neutral-200 sm:gap-5 sm:text-sm">
+        <ul className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-neutral-200 sm:gap-5 sm:text-sm">
           {links.map((l) => (
             <li key={l.href}>
               <Link href={l.href} className="transition hover:text-white">
