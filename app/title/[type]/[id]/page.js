@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import EpisodeList from "@/components/EpisodeList";
+import MyListButton from "@/components/MyListButton";
 import Providers from "@/components/Providers";
 import Row from "@/components/Row";
 import TrailerButton from "@/components/TrailerButton";
@@ -118,6 +119,15 @@ export default async function TitlePage({ params, searchParams }) {
             <div className="mt-6 flex gap-3">
               {film && <VideoPlayer src={film} title={title} label="▶ Ver película" />}
               <TrailerButton videoKey={d.trailerKey} title={title} />
+              <MyListButton
+                item={{
+                  id: Number(id),
+                  type,
+                  title,
+                  poster: img(d.poster_path, "w342"),
+                  year,
+                }}
+              />
               <Link
                 href="/"
                 className="rounded bg-neutral-500/60 px-6 py-2 font-semibold transition hover:bg-neutral-500/40"

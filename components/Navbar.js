@@ -4,12 +4,13 @@ const links = [
   { href: "/", label: "Inicio" },
   { href: "/explorar/tv", label: "Series" },
   { href: "/explorar/movie", label: "Películas" },
+  { href: "/mi-lista", label: "Mi lista" },
 ];
 
 export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-gradient-to-b from-black/90 to-transparent">
-      <nav className="flex items-center gap-3 px-4 py-4 sm:gap-6 md:px-12">
+      <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3 sm:gap-x-6 sm:py-4 md:px-12">
         <Link href="/" className="text-lg font-extrabold tracking-tight text-brand sm:text-2xl">
           STREAMFLIX
         </Link>
